@@ -22,8 +22,8 @@ export class EmployeeService {
 
      //funcion de busqueda empleado por id..
      async getById(id:number):Promise<employeeEntity>{
-         console.log(id);
-        const empleado=await this.employeeRepository.findOne(id);
+        // console.log(id);
+        const empleado=await this.employeeRepository.findOne({id},{relations:["tasks","meetings","contactInfo"]});
         if(!empleado)
         {
             throw new NotFoundException({message:"no existe"});

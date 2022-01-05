@@ -14,10 +14,9 @@ export class EmployeeController {
  }
  //buscado por id
  @Get('/getEmpleado/:id')
- async getById(@Param('id') id:string)
+ async getById(@Param('id') id:number)
  {  
-     console.log(id);
-     // return  await this.employeeService.getById(id);
+      return  await this.employeeService.getById(id);
  }
  //creando el Empleado
 @Post('/createEmpleado')

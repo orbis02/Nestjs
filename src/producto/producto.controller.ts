@@ -14,8 +14,9 @@ export class ProductoController {
  }
  //buscado por id
  @Get('/getProducto/:id')
- async getById(@Param(':id') id:string)
+ async getById(@Param('id') id:string)
  {
+
     return  await this.productoService.getById(parseInt(id));
  }
  //creando el producto
@@ -26,13 +27,13 @@ async createProducto(@Body() dto:ProductoDto):Promise<Producto>
 }
 //actualizando producto
 @Put('/updateProducto/:id')
-async update(@Param(':id') id:number, @Body() dto:ProductoDto){
+async update(@Param('id') id:number, @Body() dto:ProductoDto){
     return await this.productoService.update(id,dto);
 }
 
 //funcion para elimiar producto.
 @Delete('/deleteProducto/:id')
-async delete(@Param(':id') id:number){
+async delete(@Param('id') id:number){
     return await this.productoService.delete(id);
 }
 

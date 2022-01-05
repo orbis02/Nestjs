@@ -18,7 +18,7 @@ import { JwtStrategy } from './jwt.strategy';
     // providers: [AuthService,LocalStrategy,SessionSerializer],
   imports:[EmployeeModule,PassportModule,PassportModule,JwtModule.register({
     secret:SECRET_KEY,
-    signOptions:{expiresIn:'60s'}
+    signOptions:{expiresIn:'60m'}
   })],
   providers: [AuthService,LocalStrategy,JwtStrategy],
   exports:[AuthService]

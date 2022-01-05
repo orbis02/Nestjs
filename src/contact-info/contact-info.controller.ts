@@ -13,7 +13,7 @@ export class ContactInfoController {
     }
     //buscado por id
     @Get('/getContacto/:id')
-    async getById(@Param(':id') id:string)
+    async getById(@Param('id') id:string)
     {
        return  await this.contactInfoService.getById(parseInt(id));
     }
@@ -25,13 +25,13 @@ export class ContactInfoController {
    }
    //actualizando Contactos del Empleado 
    @Put('/updateContacto/:id')
-   async update(@Param(':id') id:number, @Body() dto:contactInfoDto){
+   async update(@Param('id') id:number, @Body() dto:contactInfoDto){
        return await this.contactInfoService.update(id,dto);
    }
    
    //funcion para elimiar contacto.
    @Delete('/deleteContacto/:id')
-   async delete(@Param(':id') id:number){
+   async delete(@Param('id') id:number){
        return await this.contactInfoService.delete(id);
    }
 }

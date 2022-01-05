@@ -15,7 +15,7 @@ export class MeetingController {
  }
  //buscado por id
  @Get('/getMeeting/:id')
- async getById(@Param(':id') id:string)
+ async getById(@Param('id') id:string)
  {
     return  await this.meetingService.getById(parseInt(id));
  }
@@ -27,13 +27,13 @@ async createEmpleado(@Body() dto:meetingDto):Promise<Meeting>
 }
 //actualizando Empleado
 @Put('/updateMeeting/:id')
-async update(@Param(':id') id:number, @Body() dto:meetingDto){
+async update(@Param('id') id:number, @Body() dto:meetingDto){
     return await this.meetingService.update(id,dto);
 }
 
 //funcion para elimiar empleado.
 @Delete('/deleteMeeting/:id')
-async delete(@Param(':id') id:number){
+async delete(@Param('id') id:number){
     return await this.meetingService.delete(id);
 }
 }

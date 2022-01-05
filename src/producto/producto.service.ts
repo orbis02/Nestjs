@@ -20,7 +20,7 @@ export class ProductoService {
     }
     //funcion de busqueda de producto por id..
     async getById(id:number):Promise<ProductoEntity>{
-        const producto=await this.productoRepository.findOne();
+        const producto=await this.productoRepository.findOne({id});
         if(!producto)
         {
             throw new NotFoundException({message:"no existe"});

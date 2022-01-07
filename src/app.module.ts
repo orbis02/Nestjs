@@ -16,7 +16,7 @@ import { ContactInfoModule } from './contact-info/contact-info.module';
 import { MeetingModule } from './meeting/meeting.module';
 import { TaskModule } from './task/task.module';
 import { AuthModule } from './auth/auth.module';
-import { PassportModule } from '@nestjs/passport';
+//import { PassportModule } from '@nestjs/passport';
 
 @Module({
   imports: [TasksModule,
@@ -61,3 +61,4 @@ import { PassportModule } from '@nestjs/passport';
   providers: [AppService],
 })
 export class AppModule {}
+//Agregar comentarios

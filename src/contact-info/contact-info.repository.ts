@@ -5,3 +5,4 @@ import { contactinfoEntity } from "./contact-info.entity";
 export class contactInfoRespository extends Repository<contactinfoEntity>{
 
 }
+//Agregar comentarios

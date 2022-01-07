@@ -4,3 +4,4 @@ import { ProductoEntity } from "./producto.entity";
 export class ProductoRepository extends Repository<ProductoEntity>{
 
 }
+//Agregar comentarios

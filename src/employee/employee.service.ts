@@ -1,5 +1,5 @@
 import { Injectable,NotFoundException } from '@nestjs/common';
-import { InjectRepository } from '@nestjs/typeorm';
+import { InjectConnection, InjectRepository } from '@nestjs/typeorm';
 import { EmployeeDto } from './dto/employee.dto';
 import { employeeEntity } from './employee.entity';
 import { employeeRepository } from './employee.repository';
@@ -33,6 +33,7 @@ export class EmployeeService {
     
     //funcion para buscar por un campo especifico en este caso nombre.
     async getByName(nombre:string):Promise<employeeEntity>{
+      
         const empleado=await this.employeeRepository.findOne({nombre:nombre});
         return empleado;
         
@@ -67,3 +68,5 @@ async update(id:number,dto:EmployeeDto):Promise<any>{
       }
 
 }
+
+//Agregar comentarios

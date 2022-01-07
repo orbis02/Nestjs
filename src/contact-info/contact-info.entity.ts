@@ -14,3 +14,4 @@ export class contactinfoEntity {
     @JoinColumn()
     employee: employeeEntity;
 }
+//Agregar comentarios

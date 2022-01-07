@@ -9,3 +9,4 @@ export class ProductoEntity{
     @Column({type:'float',nullable:false})
     precio:number;
 }
+//Agregar comentarios

@@ -5,3 +5,5 @@ import { meetingEntity } from "./meeting.entity";
 export class meetingRepository extends Repository<meetingEntity>{
 
 }
+
+//Agregar comentarios

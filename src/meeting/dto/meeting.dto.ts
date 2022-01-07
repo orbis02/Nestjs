@@ -3,3 +3,4 @@ export class meetingDto{
     zoomUrl:string;
     attendees:[];
 }
+//Agregar comentarios

@@ -4,3 +4,4 @@ import { employeeEntity } from "./employee.entity";
 export class employeeRepository extends Repository<employeeEntity>{
 
 }
+//Agregar comentarios

@@ -11,3 +11,5 @@ zoomUrl:string;
 attendees:employeeEntity[];
 
 }
+
+//Agregar comentarios

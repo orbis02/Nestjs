@@ -3,7 +3,7 @@ import { ExtractJwt,Strategy } from "passport-jwt";
 import {SECRET_KEY} from '../config/config';
 
 export class JwtStrategy extends PassportStrategy(Strategy){
-
+//jwt.strategy
     constructor(){
         super({
             jwtFromRequest:ExtractJwt.fromAuthHeaderAsBearerToken(),
